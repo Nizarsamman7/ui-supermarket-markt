@@ -1,0 +1,27 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #fffdf8; color: #1c2b22; font-family: var(--font-body), sans-serif; }
+a { color: inherit; text-decoration: none; }
+.util { background: #1f7a4d; color: white; display: flex; justify-content: space-between; padding: 0.4rem 1rem; font-size: 0.85rem; }
+.head { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.25rem; border-bottom: 3px solid #f4b942; }
+.logo { font-weight: 800; font-size: 1.6rem; letter-spacing: -0.03em; }
+.logo i { color: #1f7a4d; font-style: normal; }
+.head nav { display: flex; gap: 1rem; font-weight: 700; }
+.deal { margin: 1rem; background: #f4b942; border-radius: 1.25rem; padding: 1.5rem; display: grid; grid-template-columns: 1.4fr 0.8fr; gap: 1rem; }
+.deal h1 { font-family: var(--font-display), serif; font-size: clamp(2.4rem, 5vw, 4rem); margin: 0; line-height: 0.95; }
+.price-pill { background: #1c2b22; color: white; border-radius: 1rem; padding: 1rem; align-self: end; }
+.price-pill strong { display: block; font-size: 2.4rem; }
+.aisles { display: grid; grid-template-columns: 1.4fr 1fr 1fr; grid-template-rows: 160px 160px; gap: 0.75rem; padding: 0 1rem 1rem; }
+.tile { border-radius: 1rem; padding: 1rem; display: flex; flex-direction: column; justify-content: space-between; background: #e7f6ee; }
+.tile:first-child { grid-row: span 2; background: #1f7a4d; color: white; }
+.tile:nth-child(4) { background: #fff1cc; }
+.specials { padding: 0 1rem 2rem; }
+.card-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
+.card { background: white; border: 1px solid #eadfca; border-radius: 0.9rem; padding: 0.9rem; }
+.card b { display: block; font-size: 1.2rem; color: #1f7a4d; }
+.page-pad { padding: 1.5rem; max-width: 900px; }
+.inquiry-form { display: grid; gap: 0.7rem; }
+label { display: grid; gap: 0.25rem; font-weight: 700; }
+input, textarea, select, button { font: inherit; padding: 0.7rem; border-radius: 0.7rem; border: 1px solid #eadfca; }
+button { background: #1f7a4d; color: white; border: 0; cursor: pointer; font-weight: 800; }
+.form-success { background: #e7f6ee; padding: 1rem; border-radius: 0.8rem; }
+@media (max-width: 800px) { .deal, .aisles, .card-row { grid-template-columns: 1fr; } .tile:first-child { grid-row: auto; } }
