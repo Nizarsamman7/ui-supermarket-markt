@@ -18,19 +18,11 @@ const specials = [
 export default function HomePage() {
   return (
     <>
-      <div className="util"><span>Open 08:00–20:00</span><span>Marktplein 4</span></div>
-      <header className="head">
-        <Link className="logo" href="/">Groen<i>markt</i></Link>
-        <nav>
-          <a href="#aisles">Aisles</a>
-          <a href="#week">This week</a>
-          <Link href="/aisles">List</Link>
-        </nav>
-      </header>
       <section className="deal">
         <div>
           <p>Week 12</p>
           <h1>Tomatoes by the crate. Bread still warm.</h1>
+          <p><Link href="/week">All of this week's prices</Link></p>
         </div>
         <div className="price-pill"><span>Featured</span><strong>€1.49</strong><span>vine tomatoes, 500g</span></div>
       </section>

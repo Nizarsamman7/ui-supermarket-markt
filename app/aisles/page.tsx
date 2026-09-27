@@ -1,33 +1,24 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { InquiryForm } from "@/components/InquiryForm";
-
 export const metadata: Metadata = { title: "Aisles" };
 
-const rows = ["Produce", "Bakery", "Dairy", "Butcher", "Pantry", "Frozen", "Household", "Flowers"];
-
-export default function AislesPage() {
+export default function Page() {
   return (
-    <>
-      <header className="head">
-        <Link className="logo" href="/">Groen<i>markt</i></Link>
-        <nav><Link href="/">Home</Link></nav>
-      </header>
-      <div className="page-pad">
-        <h1>Find an aisle</h1>
-        <div className="card-row">
-          {rows.map((row) => <article className="card" key={row}><strong>{row}</strong></article>)}
-        </div>
-        <h2>Ask the shop</h2>
-        <InquiryForm
-          submitLabel="Send"
-          fields={[
-            { name: "name", label: "Name" },
-            { name: "email", label: "Email", type: "email" },
-            { name: "note", label: "What are you looking for?", type: "textarea" },
-          ]}
-        />
-      </div>
-    </>
+    <article className="sheet">
+      <p className="eyebrow">{"Find"}</p>
+      <h1>{"Where things live."}</h1>
+      <p className="lede">{"The floor is small on purpose. If you cannot see it, ask. We would rather point than make you loop."}</p>
+      
+      <div className="trio">
+<article className="panel"><h2>{"Produce"}</h2><p>{"Front left, under the windows."}</p></article>
+<article className="panel"><h2>{"Bakery"}</h2><p>{"Behind the till, bread from 7:30."}</p></article>
+<article className="panel"><h2>{"Dairy"}</h2><p>{"Back wall, cold cabinets."}</p></article>
+<article className="panel"><h2>{"Butcher"}</h2><p>{"Counter at the rear, closed Mondays."}</p></article>
+<article className="panel"><h2>{"Pantry"}</h2><p>{"Centre aisles."}</p></article>
+<article className="panel"><h2>{"Household"}</h2><p>{"Far right, past frozen."}</p></article>
+</div>
+      
+      
+      
+    </article>
   );
 }
